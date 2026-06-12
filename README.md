@@ -16,3 +16,32 @@ Highlighted richer examples in this repo include:
 - `plugins/build-web-apps` for deployment, UI, payments, and database workflows
 - `plugins/expo` for Expo and React Native apps, SDK upgrades, EAS workflows, and Codex Run actions
 - `plugins/netlify`, `plugins/remotion`, and `plugins/google-slides` for additional public skill- and MCP-backed plugin bundles
+
+## Sync with upstream
+
+This fork can track the upstream repository at `https://github.com/openai/plugins.git`.
+
+One-time setup:
+
+```bash
+git remote add upstream https://github.com/openai/plugins.git
+git fetch upstream
+```
+
+Quick sync on `main`:
+
+```bash
+sh scripts/sync-upstream.sh
+```
+
+Or, using the local git alias configured in this clone:
+
+```bash
+git sync-upstream
+```
+
+After syncing locally, push your fork if needed:
+
+```bash
+git push origin main
+```
